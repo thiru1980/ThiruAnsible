@@ -1,0 +1,8 @@
+---
+- name: Install the Improved VI Editor
+  hosts: dev
+  tasks:
+    - name: Installing the VIM Package
+      yum:
+        name: vim
+        state: present
