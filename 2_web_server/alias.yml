@@ -1,0 +1,16 @@
+---
+- name: Webserver and Alias Deployment
+  hosts: dev
+  roles:
+    - webserver
+  tasks:
+    - name: webserver alias deployment
+      template:
+        src: alias.temp.j2
+        dest: /var/www/html/index.html
+      notify: restart httpd
+  handlers:
+    - name: restart httpd
+      service:
+        name: httpd
+        state: restarted
