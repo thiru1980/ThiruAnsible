@@ -1,0 +1,8 @@
+--- 
+- name: CG execuation
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: cg execuation
+      command: cgexec -g cpuacct,memory,pids:Thiru_EX447_stat ansible-playbook install.yml
+

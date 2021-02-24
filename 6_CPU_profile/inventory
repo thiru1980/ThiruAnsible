@@ -1,0 +1,7 @@
+[dev]
+servera
+serverb
+
+[prod]
+serverc
+serverd

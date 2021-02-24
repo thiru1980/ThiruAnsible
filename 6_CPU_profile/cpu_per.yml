@@ -1,0 +1,8 @@
+---
+- name: cpu performance 
+  hosts: localhost
+  become: yes
+  ignore_errors: yes
+  tasks:
+    - name: cpu stats
+      shell: cgcreate -a thiru:thiru -t thiru:thiru -g cpuacct,memory,pids:Thiru_EX447_stat
