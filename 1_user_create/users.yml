@@ -1,0 +1,15 @@
+---
+- name: install users
+  hosts: localhost
+  vars_files:
+    - user_list.yml
+    - password.yml
+  tasks:
+  - name: useradd
+    user:
+      name: "{{ item.name }}"
+      state: present
+      password: "{{ pw_developer | password_hash('sha512') }}"
+    loop:
+      "{{  users }}"
+    when: item.job == "developer" and inventory_hostname in groups['dev'] 
