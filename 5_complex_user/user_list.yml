@@ -1,0 +1,21 @@
+---
+users:
+ - name: john
+   first: john
+   middle: schilbertz
+   last: baker
+   ID: 1220
+
+   
+ - name: martin
+   first: martin
+   middle: luther
+   last: king
+   ID: 1221
+
+   
+ - name: edwin
+   first: jose
+   middle: scinder
+   last: ravmp
+   ID: 1222

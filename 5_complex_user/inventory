@@ -1,0 +1,6 @@
+[dev]
+servera
+serverb
+
+[prod]
+localhost
